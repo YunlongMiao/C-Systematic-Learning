@@ -1,0 +1,3 @@
+﻿  Function.cpp
+G:\code\visual studio\C#\C\FileCalculate\CFileCalculate\Function.cpp(32,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  CFileCalculate.vcxproj -> G:\code\visual studio\C#\C\C\x64\Debug\CFileCalculate.exe
