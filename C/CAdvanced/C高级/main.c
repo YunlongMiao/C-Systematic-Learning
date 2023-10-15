@@ -8,7 +8,8 @@
 
 int main() {
 
-
+//变量和内存分布
+ 
 	////数据类型别名：typedef
 	//TypedefTest();
 
@@ -30,11 +31,23 @@ int main() {
 	////calloc和realloc函数
 	//CallocReallocTest();
 
-	//栈的生长方向和内存存放方向
-	StackMemoryDirection();
+	////栈的生长方向和内存存放方向
+	//StackMemoryDirection();
 
 
+//指针强化
 
+	////指针变量
+	//PointVariableTest();
+
+	////野指针和空指针
+	//OtherPointTest();
+
+	////间接访问操作符
+	//VisitOperatorTest();
+
+	//指针的步长
+	PointStepSizeTest();
 
 
 	system("pause");

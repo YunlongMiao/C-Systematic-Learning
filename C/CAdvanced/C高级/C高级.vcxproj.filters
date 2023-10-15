@@ -21,6 +21,9 @@
     <ClCompile Include="变量和内存分布.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="指针强化.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="笔记.txt">

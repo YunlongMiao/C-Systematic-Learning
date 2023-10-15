@@ -219,12 +219,22 @@ void StackDirectionTest() {
 	int c = 30;
 	int d = 40;
 
-	printf("a = %d\n", &a);
-	printf("b = %d\n", &b);
-	printf("c = %d\n", &c);
-	printf("d = %d\n", &d);
+	int num[3] = { 1,2,3 };
 
-	//a的地址小于b的地址，生长方向向上？？
+	printf("a = %x\n", &a);
+	printf("b = %x\n", &b);
+	printf("c = %x\n", &c);
+	printf("d = %x\n", &d);
+
+	printf("num[0] = %x\n", &num[0]);
+	printf("num[1] = %x\n", &num[1]);
+	printf("num[2] = %x\n", &num[2]);
+
+	//a的地址大于b的地址，生长方向向下
+	/*
+	* 经过测试，在Windows平台vs上面，程序选择32位和64位结果不同，
+	* 32位栈向下生长，64位向上生长
+	*/
 }
 
 void MemoryDirectionTest() {
@@ -237,7 +247,15 @@ void MemoryDirectionTest() {
 	printf("%x\n", *(p+2));
 	printf("%x\n", *(p+3));
 
-	//小端模式？
+	//小端模式
+
+/*
+小端：是指数据的高字节保存在内存的高地址中，而数据的低字节保存在内存的低地址中，这种存储模式将地址的高低和数据位权有效地结合起来，高地址部分权值高，低地址部分权值低。如Intel  x86结构就是使用小端模式。
+
+大端：是指数据的高字节保存在内存的低地址中，而数据的低字节保存在内存的高地址中，这样的存储模式有点儿类似于把数据当作字符串顺序处理：地址由小向大增加，而数据从高位往低位放；这和我们的阅读习惯一致。如IBM  power PC结构就是使用的大端模式。
+
+首先要知道不管是大端还是小端，cpu在读取和存储数据的时候一定都是从内存的低地址依次向高地址读取或写入。
+*/
 }
 void StackMemoryDirection() {
 
