@@ -1,2 +1,28 @@
-﻿  main.cpp
+﻿  变量和内存分布.c
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(61,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(61,9): message : 请考虑在格式字符串中使用“%zd”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(68,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(68,9): message : 请考虑在格式字符串中使用“%zd”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(69,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(69,9): message : 请考虑在格式字符串中使用“%zd”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(70,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(70,9): message : 请考虑在格式字符串中使用“%zd”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(87,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(87,9): message : 请考虑在格式字符串中使用“%zd”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(92,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(92,9): message : 请考虑在格式字符串中使用“%zd”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(197,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(197,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(197,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“int *”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(197,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 2 冲突
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(222,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(222,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(223,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(223,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(224,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(224,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(225,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(225,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(233,17): warning C4133: “初始化”: 从“int *”到“unsigned char *”的类型不兼容
+G:\code\visual studio\C#\C\CAdvanced\C高级\变量和内存分布.c(127): warning C4172: 返回局部变量或临时变量的地址: a
   C高级.vcxproj -> G:\code\visual studio\C#\C\C\x64\Debug\C高级.exe
