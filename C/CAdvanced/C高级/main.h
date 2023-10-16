@@ -15,3 +15,8 @@ void PointVariableTest();//指针变量
 void OtherPointTest();//野指针和空指针
 void VisitOperatorTest();//间接访问操作符
 void PointStepSizeTest();//指针的步长
+void StrAttentionTest();//字符串注意事项
+void StrExercisesTest();//字符串练习
+void StrFormattingTest();//字符串格式化
+void StrFormattingTest_T();//字符串练习
+void StrStrengthenFindTest();//字符串强化-子串查找

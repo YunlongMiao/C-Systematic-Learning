@@ -180,6 +180,7 @@ realloc:重新分配用malloc或者calloc函数在堆中分配内存空间的大小
 
 void CallocReallocTest() {
 
+	//calloc开辟的空间自动赋值0
 	int* p = calloc(10, sizeof(int));
 	if (p == NULL)
 		return;
@@ -190,6 +191,8 @@ void CallocReallocTest() {
 		printf("calloc Test p[%d]=%d\n", i, p[i]);
 	printf("\n\n");
 
+
+	//如果开辟的空间比原来大，后续的空间不会清空
 	int* p1 = realloc(p, 15 * sizeof(int));
 	if (p1 == NULL)
 		return;

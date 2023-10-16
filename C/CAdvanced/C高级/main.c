@@ -46,8 +46,23 @@ int main() {
 	////间接访问操作符
 	//VisitOperatorTest();
 
-	//指针的步长
-	PointStepSizeTest();
+	////指针的步长
+	//PointStepSizeTest();
+
+	////字符串注意事项
+	//StrAttentionTest();
+
+	////字符串练习
+	//StrExercisesTest();
+
+	////字符串格式化
+	//StrFormattingTest();
+
+	////分割姓名
+	//StrFormattingTest_T();
+
+	//字符串强化-子串查找
+	StrStrengthenFindTest();
 
 
 	system("pause");
