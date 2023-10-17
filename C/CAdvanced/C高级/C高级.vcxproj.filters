@@ -24,6 +24,9 @@
     <ClCompile Include="指针强化.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="结构体和文件的高级用法.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="笔记.txt">

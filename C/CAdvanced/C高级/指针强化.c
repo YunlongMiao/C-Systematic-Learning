@@ -603,3 +603,203 @@ void SecondOrderPointerFileRWTest() {
 
 }
 
+
+/*
+位运算
+*/
+void bitOperationTest() {
+
+	//按位取反
+	int num = 2;
+	printf("%d\n", ~num);	//-3
+	// 0...10
+	// 1...01	原码
+	// 1...10+1 111 补码
+
+	//按位与
+	if (num & 1)
+		printf("奇数\n");
+	else
+		printf("偶数\n");
+
+	//按位异或
+	int num626 = 5;
+	int num627 = 9;
+	printf("num626 = %d\nnum627 = %d\n\n", num626, num627);
+	//	0101  5		1
+	//	1001  9		2
+	//  1100  12	3
+
+	num626 = num626 ^ num627;
+	num627 = num626 ^ num627;
+	num626 = num626 ^ num627;
+	printf("num626 = %d\nnum627 = %d\n\n", num626, num627);
+
+	num626 = num626 + num627;
+	num627 = num626 - num627;
+	num626 = num626 - num627;
+	printf("num626 = %d\nnum627 = %d\n\n", num626, num627);
+
+}
+
+
+/*
+一维数组名称
+*/
+void oneDimensionalArrayTest() {
+
+	//一维数组的名，不是指向第一个元素的指针
+	int arr[5] = { 1,2,3,4,5 };
+	printf("sizeof arr = %d\n", sizeof(arr));
+
+	//对数组名，取地址
+	printf("&arr \t%d\n", &arr);
+	printf("&arr+1 \t%d\n", &arr + 1);
+
+	/*
+	第一种：对数组名称 sizeof
+	第二种：对数组名称取地址 步长为整个数组长度
+	除这两种情况，一维数组名 指向数组第一个元素的指针
+	*/
+
+	int* p = arr;
+	//数组名是指针常量
+	//int* const p	指针常量,指针指向不能修改
+	//const int* p	常量指针，指针指向的值不能修改
+
+	//数组访问的时候，下标可以为负数
+	p = p + 3;
+	printf("%d\n", p[0]);
+	printf("%d\n", p[-1]);	//给人看
+	printf("%d\n", *(p - 1));	//给机器看
+}
+
+
+/*
+数组指针的定义
+*/
+
+void arrayPointTest() {
+
+	int num[5] = { 1,2,3,4,5 };
+
+	//第一种
+	typedef int(ARRAY_TYPE)[5];	//ARRAY_TYPE是一个有5个int类型的数组类型
+	ARRAY_TYPE* arrP = &num;
+	for (int i = 0; i < 5; i++)
+		printf("%d\n", (*arrP)[i]);
+	printf("\n\n");
+
+	//第二种
+	typedef int(*ARRAY_TYPE1)[5];
+	ARRAY_TYPE1 arrPY = &num;
+	for (int i = 0; i < 5; i++)
+		printf("%d\n", (*arrP)[i]);
+	printf("\n\n");
+
+
+	//第三种
+	int(*p)[5] = &num;
+	for (int i = 0; i < 5; i++)
+		printf("%d\n", (*p)[i]);
+	printf("\n\n");
+}
+
+
+/*
+二维数组数组名
+*/
+
+//void disPlay713(int pArr[][3], int len1, int len2)
+//void disPlay713(int pArr[3][3], int len1, int len2)
+void disPlay713(int(*pArr)[3], int len1, int len2) 
+{
+
+	for(int i=0;i<len1;i++)
+		for (int j = 0; j < len2; j++)
+		{
+			printf("%d", *(*(pArr + i) + j));
+			printf("%d\n", pArr[i][j]);
+		}
+}
+
+void twoDimensionalArrayTest() {
+
+	int arr1[3][3] = {
+		{1,2,3},
+		{4,5,6},
+		{7,8,9}
+	};
+	int arr2[3][3] = { 1,2,3,4,5,6,7,8,9 };
+
+	int arr3[][3] = { 1,2,3,4,5,6,7,8,9 };
+
+	int(*p)[3] = arr1;	//一般情况下，指向第一行数组
+
+	//通过p指针 访问6
+	printf("%d\n", *(*p + 5));
+	printf("%d\n", *(*(p + 1) + 2));
+	printf("%d\n", p[1][2]);
+
+	disPlay713(arr1, 3, 3);
+
+	printf("%d\n", sizeof(arr1));
+	printf("%d\n", &arr1);
+	printf("%d\n", &arr1 + 1);
+
+	int(*p1)[3][3] = &arr1;
+}
+
+/*
+选择排序
+*/
+void selectionSort1(int* arr, int len) {
+
+	for (int i = 0; i < len; i++)
+	{
+		int min = i;
+		for(int j=i+1; j<len; j++)
+			if (arr[min] > arr[j])
+			{
+				arr[min] = arr[min] + arr[j];
+				arr[j] = arr[min] - arr[j];
+				arr[min] = arr[min] - arr[j];
+			}
+	}
+}
+
+void selectionSort2(char* arr[], int len) {
+
+	for (int i = 0; i < len; i++)
+	{
+		int max = i;
+		for (int j = i + 1; j < len; j++)
+			if (strcmp(arr[max], arr[j]) == -1)
+				max = j;
+
+		if(i!=max) 
+		{
+			char* temp = arr[max];
+			arr[max] = arr[i];
+			arr[i] = temp;
+		}
+	}
+}
+
+
+void selectionSortTest() {
+
+	int pArr[] = {1,2,10,4,5,50,7,8,9};
+	char* Arr[] = { "aaa","bbb","ccc","ddd","eee" };
+	int len = sizeof(pArr) / sizeof(pArr[0]);
+
+	selectionSort1(pArr, len);
+	for (int i = 0; i < len; i++)
+		printf("%d\n", pArr[i]);
+
+	len = sizeof(Arr) / sizeof(Arr[0]);
+	selectionSort2(Arr, len);
+	for (int i = 0; i < len; i++)
+		printf("%s\n", Arr[i]);
+
+}

@@ -25,3 +25,10 @@ void SecondOrderPointerOutputTest();//二级指针的输出特性
 void SecondOrderPointerInputTest();//二级指针的输入特性
 void SecondOrderPointerParameterOutputTest();//二级指针做函数参数的输出特性
 void SecondOrderPointerFileRWTest(); //二级指针练习 - 文件读写
+void bitOperationTest();//位运算
+void oneDimensionalArrayTest();//一维数组名称
+void arrayPointTest();//数组指针的定义
+void twoDimensionalArrayTest();//二维数组数组名
+void selectionSortTest();//选择排序
+
+//结构体和文件的高级用法

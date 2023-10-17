@@ -76,8 +76,36 @@ int main() {
 	////二级指针做函数参数的输出特性
 	//SecondOrderPointerParameterOutputTest();
 
-	//二级指针练习 - 文件读写---着重理解
-	SecondOrderPointerFileRWTest(); 
+	////二级指针练习 - 文件读写---着重理解
+	//SecondOrderPointerFileRWTest(); 
+
+	////位运算
+	//bitOperationTest();
+
+	////一维数组名称
+	//oneDimensionalArrayTest();
+
+	////数组指针的定义
+	//arrayPointTest();
+
+	////二维数组数组名
+	//twoDimensionalArrayTest();
+
+	////选择排序
+	//selectionSortTest();
+
+
+
+//结构体和文件的高级用法
+
+
+
+
+
+
+
+
+
 
 	system("pause");
 	return EXIT_SUCCESS;
