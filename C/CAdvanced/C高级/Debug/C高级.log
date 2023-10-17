@@ -1,12 +1,14 @@
 ﻿  指针强化.c
-G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(10,7): warning C4047: “初始化”:“int *”与“int”的间接级别不同
-G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(11,9): warning C4047: “初始化”:“int ***”与“int”的间接级别不同
-G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(35,8): warning C4047: “初始化”:“char *”与“int”的间接级别不同
+G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(9,7): warning C4047: “初始化”:“int *”与“int”的间接级别不同
+G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(10,9): warning C4047: “初始化”:“int ***”与“int”的间接级别不同
+G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(34,8): warning C4047: “初始化”:“char *”与“int”的间接级别不同
+G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(84,9): warning C4477: “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“unsigned int *”
 G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(85,9): warning C4477: “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“unsigned int *”
-G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(86,9): warning C4477: “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“unsigned int *”
+G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(87,9): warning C4477: “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“unsigned char *”
 G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(88,9): warning C4477: “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“unsigned char *”
-G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(89,9): warning C4477: “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“unsigned char *”
-G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(80,17): warning C4133: “初始化”: 从“int *”到“unsigned char *”的类型不兼容
+G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(79,17): warning C4133: “初始化”: 从“int *”到“unsigned char *”的类型不兼容
 G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(328,21): warning C4018: “<”: 有符号/无符号不匹配
 G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(332,23): warning C4018: “<”: 有符号/无符号不匹配
+G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(436,25): warning C4133: “函数”: 从“int *”到“const char *”的类型不兼容
+G:\code\visual studio\C#\C\CAdvanced\C高级\指针强化.c(468,25): warning C4133: “函数”: 从“int *”到“const char *”的类型不兼容
   C高级.vcxproj -> G:\code\visual studio\C#\C\C\Debug\C高级.exe

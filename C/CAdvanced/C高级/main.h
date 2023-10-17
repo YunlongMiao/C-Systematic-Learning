@@ -20,3 +20,8 @@ void StrExercisesTest();//字符串练习
 void StrFormattingTest();//字符串格式化
 void StrFormattingTest_T();//字符串练习
 void StrStrengthenFindTest();//字符串强化-子串查找
+void FirstOrderPointerTest();//一级指针易错点
+void SecondOrderPointerOutputTest();//二级指针的输出特性
+void SecondOrderPointerInputTest();//二级指针的输入特性
+void SecondOrderPointerParameterOutputTest();//二级指针做函数参数的输出特性
+void SecondOrderPointerFileRWTest(); //二级指针练习 - 文件读写

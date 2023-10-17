@@ -4,7 +4,6 @@
 #include<stdlib.h>	//标准库函数
 
 //指针变量
-
 void PointVariableTest() {
 
 	int* p1 = 0x1234;
@@ -343,14 +342,16 @@ void StrStrengthenFindTest() {
 
 	//视频内容
 	{
-		temp = 0;
-		while (*str != '\0') {
+		int x = 0;
+		temp = -1;
+		while (*str != '\0') 
+		{
 
 
-			if (*str != *goal) {
-
+			if (*str != *goal) 
+			{
+				x++;
 				str++;
-				temp++;
 				continue;
 			}
 
@@ -358,19 +359,247 @@ void StrStrengthenFindTest() {
 			char* temstr = str;
 			char* temgoal = goal;
 
-			while (*temgoal != '\0') {
-
+			while (*temgoal != '\0') 
+			{
+				
 				temstr++;
 				temgoal++;
-				if (*temstr != *temgoal)
+
+				if (*temstr != *temgoal)//匹配失败情况
 					break;
 			}
+
+			str++;
+
 			if (*temgoal == '\0')
 			{
+				temp = x;
+				x = -1;
 				printf("%d\n", temp);
 				break;
 			}
 		}
+		if(x != -1)
+			printf("%d\n", temp);
 	}
+}
+
+
+/*
+一级指针易错点
+*/
+//指针移动后不可free
+void FirstOrderPointerTest() {
+
+	char* p = (char*)malloc(sizeof(char) * 64);
+	char* pp = p;
+	for (int i = 0; i < 10; i++)
+	{
+		*pp = i + 97;
+		printf("%c\n", *pp);
+		pp++;
+	}
+
+	free(p);
+
+	p = NULL;
+
+}
+
+
+/*
+二级指针的输出特性
+*/
+
+void SecondOrderPointerOutputTest() {
+
+	//在堆区开辟内存
+	int** pArray = malloc(sizeof(int*) * 5);
+
+	//在栈上开辟数据
+	int a1 = 100;
+	int a2 = 200;
+	int a3 = 300;
+	int a4 = 400;
+	int a5 = 500;
+
+	//堆区数组维护 栈上数据的地址，建立联系
+	pArray[0] = &a1;
+	pArray[1] = &a2;
+	pArray[2] = &a3;
+	pArray[3] = &a4;
+	pArray[4] = &a5;
+
+	int** Array = pArray;	//传入后，*数组名退化为**指针
+	
+	printf("%d\n", sizeof((Array)) / sizeof(int*));
+	printf("%d\n", strlen((*Array)));
+
+	for (int i = 0; i < 5; i++)
+		printf("%d\n", *Array[i]);
+
+	//释放堆区空间
+	if (pArray != NULL)
+	{
+		free(pArray);
+		pArray = NULL;
+	}
+
+}
+
+
+
+/*
+二级指针的输入特性
+*/
+void SecondOrderPointerInputTest() {
+
+	//在栈上开辟内存
+	int* pArray[5];
+	for (int i = 0; i < 5; i++) {
+
+		pArray[i] = malloc(4);//栈上每个数据 维护 栈区开辟的内存
+		*(pArray[i]) = i + 100;
+	}
+	int** Array = pArray;
+
+	printf("%d\n", sizeof(pArray) / sizeof(int*));	//5 pArray 数组
+	printf("%d\n", sizeof(Array) / sizeof(int*));	//1 Array	二级指针
+	printf("%d\n", strlen((*Array)));				//1
+
+	for (int i = 0; i < 5; i++)
+		printf("%d\n", *Array[i]);
+
+	//堆区数据释放
+	for (int i = 0; i < 5; i++)
+	{
+		if (pArray[i] != NULL)
+			free(pArray[i]);
+		pArray[i] = NULL;
+	}
+
+}
+
+
+/*
+二级指针做函数参数的输出特性
+*/
+void AllocateSpace(int** pp) {
+
+	int* pArray = malloc(sizeof(int) * 10);
+
+	for (int i = 0; i < 10; i++)
+		pArray[i] = i + 100;
+
+	*pp = pArray;
+}
+void SecondOrderPointerParameterOutputTest() {
+
+	int* p = NULL;
+	AllocateSpace(&p);
+
+	for (int i = 0; i < 10; i++)
+		printf("%d\n", p[i]);
+
+	int** arr = &p;
+	for (int i = 0; i < 10; i++)
+		printf("%d\n", (*arr)[i]);
+
+	//释放堆区数据
+	if (p != NULL)
+	{
+		free(p);
+		p = NULL;
+	}
+}
+
+
+/*
+二级指针练习-文件读写
+*/
+
+int getFileLines(FILE* fp) {
+
+	if (fp == NULL)
+		return -1;
+
+	char buf[1024];
+	int lines = 0;
+
+	while (fgets(buf, 1024, fp) != NULL)
+	{
+		lines++;
+		//printf("%s\n", buf);
+	}
+
+	//将光标置首
+	fseek(fp, 0, SEEK_SET);
+
+	return lines;
+}
+
+void readFileData(FILE* FILE, char** pArray,int len) {
+
+	if (FILE == NULL || pArray == NULL || len <= 0)
+		return;
+
+	char buf[1024] = { 0 };
+	int index = 0;
+
+	while (fgets(buf, 1024, FILE) != NULL) {
+
+		//计算开辟每个字符串的大小
+		int currentLen = strlen(buf) + 1;
+		//字符串最后字符改为 \0
+		buf[strlen(buf) - 1] = '\0';
+
+		//开辟堆区空间
+		char* currentP = malloc(sizeof(char) * currentLen);
+
+		//将文件中读取的内容，放到开辟的空间中
+		strcpy(currentP, buf);
+
+		//将开辟空间的数据 放入数组中
+		pArray[index++] = currentP;
+
+		//清空buf
+		memset(buf, 0, 1024);
+	}
+}
+
+void SecondOrderPointerFileRWTest() {
+
+	//打开文件
+	FILE* fp = fopen("./filetest.txt", "r");
+	if (fp == NULL)
+		printf("open file fail");
+
+	//获取文件有效行数
+	int len = getFileLines(fp);
+	printf("%d\n", len);
+	char** pArray = malloc(sizeof(char*) * len);
+
+	//将文件中的数据放到pArray的数组中
+	readFileData(fp,pArray,len);
+
+	//打印数组
+	for (int i = 0; i < len; i++)
+		printf("%s\n", pArray[i]);
+
+	//关闭文件
+	fclose(fp);
+	fp = NULL;
+	//释放堆区
+	for(int i=0;i<len;i++)
+		if (pArray[i] != NULL)
+		{
+			printf("%s被释放\n", pArray[i]);
+			free(pArray[i]);
+			pArray[i] = NULL;
+		}
+
+	free(pArray);
+	pArray = NULL;
+
 }
 

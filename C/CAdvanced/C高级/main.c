@@ -61,9 +61,23 @@ int main() {
 	////分割姓名
 	//StrFormattingTest_T();
 
-	//字符串强化-子串查找
-	StrStrengthenFindTest();
+	////字符串强化-子串查找
+	//StrStrengthenFindTest();
 
+	////一级指针易错点
+	//FirstOrderPointerTest();
+
+	////二级指针的输出特性
+	//SecondOrderPointerOutputTest();
+
+	////二级指针的输入特性
+	//SecondOrderPointerInputTest();
+
+	////二级指针做函数参数的输出特性
+	//SecondOrderPointerParameterOutputTest();
+
+	//二级指针练习 - 文件读写---着重理解
+	SecondOrderPointerFileRWTest(); 
 
 	system("pause");
 	return EXIT_SUCCESS;
