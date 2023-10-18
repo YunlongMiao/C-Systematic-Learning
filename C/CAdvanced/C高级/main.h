@@ -32,3 +32,6 @@ void twoDimensionalArrayTest();//二维数组数组名
 void selectionSortTest();//选择排序
 
 //结构体和文件的高级用法
+void structNestTest();//结构体嵌套一级指针
+void strcutNestTwoPoint();//结构体嵌套二级指针
+void structOffsetTest();//结构体偏移量

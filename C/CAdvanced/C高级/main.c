@@ -97,8 +97,15 @@ int main() {
 
 
 //结构体和文件的高级用法
+ 
+	////结构体嵌套一级指针
+	//structNestTest();
 
+	////结构体嵌套二级指针
+	//strcutNestTwoPoint();
 
+	//结构体偏移量
+	structOffsetTest();
 
 
 
