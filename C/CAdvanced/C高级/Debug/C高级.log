@@ -1,2 +1,5 @@
 ﻿  结构体和文件的高级用法.c
+G:\code\visual studio\C#\C\CAdvanced\C高级\结构体和文件的高级用法.c(258,3): warning C4033: “openFile”必须返回值
+G:\code\visual studio\C#\C\CAdvanced\C高级\结构体和文件的高级用法.c(273,20): warning C4018: “<”: 有符号/无符号不匹配
+G:\code\visual studio\C#\C\CAdvanced\C高级\结构体和文件的高级用法.c(261): warning C4715: “openFile”: 不是所有的控件路径都返回值
   C高级.vcxproj -> G:\code\visual studio\C#\C\C\Debug\C高级.exe

@@ -104,10 +104,14 @@ int main() {
 	////结构体嵌套二级指针
 	//strcutNestTwoPoint();
 
-	//结构体偏移量
-	structOffsetTest();
+	////结构体偏移量
+	//structOffsetTest();
 
+	////内存对齐
+	//memoryAligningTest();
 
+	//文件读写
+	fileWRTest();
 
 
 

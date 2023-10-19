@@ -35,3 +35,5 @@ void selectionSortTest();//选择排序
 void structNestTest();//结构体嵌套一级指针
 void strcutNestTwoPoint();//结构体嵌套二级指针
 void structOffsetTest();//结构体偏移量
+void memoryAligningTest();//内存对齐
+void fileWRTest();//文件读写
