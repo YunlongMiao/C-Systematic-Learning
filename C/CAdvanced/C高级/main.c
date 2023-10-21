@@ -110,11 +110,27 @@ int main() {
 	////内存对齐
 	//memoryAligningTest();
 
-	//文件读写
-	fileWRTest();
+	////文件读写
+	//fileWRTest();
 
 
+//链表和回调函数
 
+
+	////链表操作
+	//linkListTest();
+
+	////函数指针
+	//funcPoint();
+
+	////回调函数-类型
+	//callBackTypeTest();
+
+	////回调函数-数组
+	//callBackArrayTest();
+
+	//回调函数-查找数组
+	callBackFindArrayTest();
 
 
 
