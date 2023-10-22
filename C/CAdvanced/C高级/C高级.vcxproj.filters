@@ -30,6 +30,9 @@
     <ClCompile Include="链表和回调函数.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="编译过程和面向接口.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="笔记.txt">
@@ -41,6 +44,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="linklist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="myLib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="myDll.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

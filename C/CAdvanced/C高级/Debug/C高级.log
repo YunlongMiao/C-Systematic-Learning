@@ -1,3 +1,3 @@
-﻿  链表和回调函数.c
-G:\code\visual studio\C#\C\CAdvanced\C高级\链表和回调函数.c(216,6): warning C4047: “初始化”:“int”与“void (__cdecl *)(int,char)”的间接级别不同
+﻿  main.c
+G:\code\visual studio\C#\C\CAdvanced\C高级\main.h(1,1): warning C4828: 文件包含在偏移 0x6f8 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
   C高级.vcxproj -> G:\code\visual studio\C#\C\C\Debug\C高级.exe

@@ -2,8 +2,13 @@
 #include<stdio.h>	//标准输入输出
 #include<string.h>	//字符串处理函数
 #include<stdlib.h>	//标准库函数
-#include"main.h"
+#include "main.h"
 
+#pragma comment(lib,"./myDll.lib")	//链接动态库，可以不导入
+#pragma comment(lib,"./StaticLib.lib")
+
+#include "myLib.h"
+#include "myDll.h"
 
 
 int main() {
@@ -129,10 +134,21 @@ int main() {
 	////回调函数-数组
 	//callBackArrayTest();
 
-	//回调函数-查找数组
-	callBackFindArrayTest();
+	////回调函数-查找数组
+	//callBackFindArrayTest();
 
 
+
+//编译过程和面向接口
+
+	////4.特殊宏
+	//specialMacroTest();
+
+	//静态库测试
+	printf("%d\n", myStaticLibTest(60, 20));
+
+	//动态库测试
+	printf("%d\n", mySubDllTest(60, 30));
 
 	system("pause");
 	return EXIT_SUCCESS;

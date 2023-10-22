@@ -44,3 +44,10 @@ void funcPoint();//函数指针
 void callBackTypeTest();//回调函数-类型
 void callBackArrayTest();//回调函数-数组
 void callBackFindArrayTest();//回调函数-查找数组
+
+
+
+//编译过程和面向接口
+
+
+void specialMacroTest();//4.特殊宏

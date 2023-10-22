@@ -131,6 +131,7 @@
     <ClCompile Include="变量和内存分布.c" />
     <ClCompile Include="指针强化.c" />
     <ClCompile Include="结构体和文件的高级用法.c" />
+    <ClCompile Include="编译过程和面向接口.c" />
     <ClCompile Include="链表和回调函数.c" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,8 @@
   <ItemGroup>
     <ClInclude Include="linklist.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="myDll.h" />
+    <ClInclude Include="myLib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
