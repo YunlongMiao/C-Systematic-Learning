@@ -1,0 +1,8 @@
+﻿  main.cpp
+G:\code\visual studio\C#\C++\FundamentalsCompiling2\FundamentalsCompiling2\main.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+G:\code\visual studio\C#\C++\FundamentalsCompiling2\FundamentalsCompiling2\main.cpp(161,12): error C2001: 常量中有换行符
+G:\code\visual studio\C#\C++\FundamentalsCompiling2\FundamentalsCompiling2\main.cpp(162,5): error C2143: 语法错误: 缺少“)”(在“for”的前面)
+G:\code\visual studio\C#\C++\FundamentalsCompiling2\FundamentalsCompiling2\main.cpp(161,12): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+G:\code\visual studio\C#\C++\FundamentalsCompiling2\FundamentalsCompiling2\main.cpp(161,12): message : 占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+G:\code\visual studio\C#\C++\FundamentalsCompiling2\FundamentalsCompiling2\main.cpp(161,12): message : 缺失的可变参数 1 为格式字符串“%c”所需
+G:\code\visual studio\C#\C++\FundamentalsCompiling2\FundamentalsCompiling2\main.cpp(162,5): error C2143: 语法错误: 缺少“;”(在“for”的前面)
