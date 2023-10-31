@@ -1,0 +1,7 @@
+﻿  main.c
+G:\code\visual studio\C#\C++\FundamentalsCompiling3\FundamentalsCompiling3\main.c(179,9): warning C4101: “i”: 未引用的局部变量
+G:\code\visual studio\C#\C++\FundamentalsCompiling3\FundamentalsCompiling3\main.c(323,9): warning C4013: “getch”未定义；假设外部返回 int
+G:\code\visual studio\C#\C++\FundamentalsCompiling3\FundamentalsCompiling3\main.c(324,9): warning C4013: “exit”未定义；假设外部返回 int
+G:\code\visual studio\C#\C++\FundamentalsCompiling3\FundamentalsCompiling3\main.c(312): warning C4715: “change1”: 不是所有的控件路径都返回值
+G:\code\visual studio\C#\C++\FundamentalsCompiling3\FundamentalsCompiling3\main.c(384): warning C4715: “Irparse1”: 不是所有的控件路径都返回值
+  FundamentalsCompiling3.vcxproj -> G:\code\visual studio\C#\C++\C++\x64\Debug\FundamentalsCompiling3.exe
