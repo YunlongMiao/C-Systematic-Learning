@@ -62,7 +62,7 @@ int stack1[100];//状态栈1
 int sp1 = 0;//状态栈 1 的栈顶指针
 int num = 0;//表达式缓冲区指针
 
-/*****************算术表达式的LR析表****************************/
+/*****************算术表达式的LR分析表****************************/
 static int action1[10][7] =
 {
     {3,-1, -1,2,-1,-1, 1},      //0
@@ -434,7 +434,7 @@ Irparse()//可添加其它语法成分
 disp1()
 {
     int temp1 = 0;
-    printf("********词法分析结果********** n");
+    printf("********词法分析结果********** \n");
     for (temp1 = 0; temp1 <= count; temp1++)
     {
         printf("%d\t%d\n", buf[temp1].sy1, buf[temp1].pos);
@@ -500,7 +500,7 @@ disp3()
     int ttt;
     printf("\n\n 程序总共%d 行，产生了%d 个二元式!\n", lnum, count);
     getch();
-    printf("n*********变量名表************ n");
+    printf("\n*********变量名表************ \n");
     for (ttt = 0; ttt < tt1; ttt++)
         printf("%d\t%s\n", ttt, vartab[ttt]);
     getch();
